@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* import font */
+@font-face {
+    font-family: 'Cairo';
+    src: url('../assets/fonts/Cairo-VariableFont_slnt\,wght.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Basic styles for the page */
+body {
+    font-family: Cairo, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f9;
+    color: #000424;
+}
+
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+.dark {
+    background-color: #1a1d37 !important;
+    color: #fff !important;
+    transition: all 0.5s ease;
+}
+
+.navbar-dark {
+    background-color: #4447643f !important;
+    color: #fff !important;
+}

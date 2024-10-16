@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Sahalat</title>
+        <link rel="stylesheet" href="./css/all.css" />
+        <link href="./dist/output.css" rel="stylesheet">
+        <link rel="stylesheet" href="./css/main.css" />
+    </head>
+    <body>
+        <nav id="nav" class="fixed w-full z-20 top-0 bg-white">
+            <div class="max-w-6xl mx-auto px-4">
+                <div class="flex justify-between">
+                    <!-- Logo -->
+                    <div class="flex space-x-4">
+                        <div>
+                            <a href="#"
+                                class="flex items-center py-5 px-2">
+                                <img src="https://via.placeholder.com/40"
+                                    alt="Logo" class="h-8 w-8 mx-2">
+                                <span class="font-bold text-lg">Sahalat</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Links -->
+                    <div class="hidden md:flex items-center space-x-1"
+                        id="navLinks">
+                        <a href="#" class="py-5 px-3 font-bold"
+                            data-key="nav.home">Home</a>
+                        <a href="#About" class="py-5 px-3"
+                            data-key="nav.about">About</a>
+                        <a href="#services" class="py-5 px-3"
+                            data-key="nav.services">services</a>
+                        <a href="#contact" class="py-5 px-3"
+                            data-key="nav.contact">contact us</a>
+                    </div>
+
+                    <div class="flex items-center gap-5">
+                        <!-- Language & Dark Mode -->
+                        <div class="flex items-center gap-5">
+                            <div class="md:flex items-center gap-2 relative">
+                                <select id="languageSwitcher"
+                                    class="py-2 pl-10 pr-3 border dark:border-[#404254] dark:bg-gray-800 dark:text-gray-300 focus:outline-none rounded-2xl appearance-none">
+                                    <option value="en">En</option>
+                                    <option value="ar">Ar</option>
+                                </select>
+                                <span
+                                    class="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-700 dark:text-gray-300">
+                                    <i class="fa-solid fa-globe"></i>
+                                </span>
+                            </div>
+
+                            <div class="md:flex items-center space-x-2">
+                                <button id="darkModeToggle"
+                                    class="py-2 px-4 border dark:border-[#404254] rounded-full bg-gray-100 text-gray-700 focus:outline-none dark:bg-gray-800 dark:text-gray-300">
+                                    <i id="darkModeIcon"
+                                        class="fa-regular fa-moon"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <!-- Mobile Menu Button -->
+                        <div class="md:hidden flex items-center">
+                            <button class="mobile-menu-button">
+                                <svg class="w-6 h-6 text-gray-700" fill="none"
+                                    stroke="currentColor" viewBox="0 0 24 24"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round"
+                                        stroke-linejoin="round" stroke-width="2"
+                                        d="M4 6h16M4 12h16m-7 6h7"></path>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mobile-menu hidden md:hidden text-center bg-white py-5" id="navLinks">
+                <a href="#"
+                    class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-200" data-key="nav.home">Home</a>
+                <a href="#"
+                    class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-200" data-key="nav.about">About</a>
+                <a href="#" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-200"
+                    data-key="nav.services">services</a>
+                <a href="#"
+                    class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-200" data-key="nav.contact">contact
+                    us</a>
+            </div>
+        </nav>
+
+        <section class="container mx-auto">
+            <div class="flex items-center">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 translate-y-1/2">
+                    <div class="flex items-center justify-center">
+                        <img src="https://via.placeholder.com/400"
+                            alt="Placeholder" class="w-80 h-80 rounded-lg">
+                    </div>
+                    <div class="flex flex-col justify-center">
+                        <h1 id="welcome" class="text-8xl font-bold">Welcome</h1>
+                        <p class="mt-4">This is an example website demonstrating
+                            i18n with Tailwind CSS.</p>
+                        <p class="mt-4">This website is built using HTML, CSS, and
+                            JavaScript.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <script src="https://unpkg.com/i18next@21.6.5/i18next.min.js"></script>
+        <script
+            src="https://unpkg.com/i18next-http-backend@1.4.2/i18nextHttpBackend.min.js"></script>
+        <script
+            src="https://unpkg.com/i18next-browser-languagedetector@6.1.2/dist/umd/i18nextBrowserLanguageDetector.min.js"></script>
+
+        <script src="./js/i18n.js"></script>
+        <script src="./js/darkMode.js"></script>
+        <script src="./js/main.js"></script>
+
+        <script>
+            const btn = document.querySelector(".mobile-menu-button");
+            const menu = document.querySelector(".mobile-menu");
+
+            btn.addEventListener("click", () => {
+            menu.classList.toggle("hidden");
+            });
+        </script>
+    </body>
+</html>

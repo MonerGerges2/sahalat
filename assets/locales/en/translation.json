@@ -1,0 +1,9 @@
+{
+  "welcome": "Welcome to Sahalat",
+  "nav": {
+    "home": "Home",
+    "about": "About Sahalat",
+    "services": "Our Services",
+    "contact": "Contact Us"
+  }
+}
