@@ -31,16 +31,20 @@ function changeLanguage(lang) {
 function updateContent() {
   document.getElementById("welcome").innerHTML = i18next.t("welcome");
   if (i18next.language === "ar") {
-    document.getElementById("welcome").classList.add("leading-[8rem]");
+    document.getElementById("welcome").classList.add("line-spacer");
+    console.log("arabic");
+    
   } else {
-    document.getElementById("welcome").classList.remove("leading-[8rem]");
+    document.getElementById("welcome").classList.remove("line-spacer");
 }
-
+  document.getElementById("partners").innerHTML = i18next.t("partners.title");
   const navLinks = document.querySelectorAll("#navLinks a");
   navLinks.forEach((link) => {
     const key = link.getAttribute("data-key");
     link.innerHTML = i18next.t(key);
   });
+
+
 
   const lang = i18next.language;
   document.documentElement.dir = lang === "ar" ? "rtl" : "ltr";

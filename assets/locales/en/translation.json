@@ -5,5 +5,8 @@
     "about": "About Sahalat",
     "services": "Our Services",
     "contact": "Contact Us"
+  },
+  "partners": {
+    "title": "Our Partners"
   }
 }
